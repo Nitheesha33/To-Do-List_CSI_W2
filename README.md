@@ -6,7 +6,7 @@ A modern, interactive to-do/task manager built with **React.js**. This project a
 
 ## 🚀 Live Demo
 
-*Coming soon!*
+[View the deployed app on Vercel](https://to-do-list-csi-w2.vercel.app/)
 
 ---
 
@@ -40,7 +40,7 @@ A modern, interactive to-do/task manager built with **React.js**. This project a
 
 - Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Nitheesha33/To-Do-List_CSI_W2.git
 ```
 - Navigate to the project directory
 ```bash
