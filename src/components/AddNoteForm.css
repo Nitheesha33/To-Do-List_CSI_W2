@@ -1,0 +1,152 @@
+.add-note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #fffbe6;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(52,180,236,0.08);
+  padding: 20px;
+  margin: 24px 0 12px 24px;
+  width: 280px;
+  z-index: 3;
+  position: relative;
+}
+
+.form-error {
+  background: #ffebee;
+  color: #ec3434;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 0.9em;
+  margin-bottom: 4px;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+.add-note-form input[type="text"],
+.add-note-form textarea,
+.add-note-form input[type="date"],
+.add-note-form select {
+  border: 1px solid #b4b4ac;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1em;
+  outline: none;
+  resize: none;
+  background: white;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.add-note-form input[type="text"]:focus,
+.add-note-form textarea:focus,
+.add-note-form input[type="date"]:focus,
+.add-note-form select:focus {
+  border-color: #34b4ec;
+  box-shadow: 0 0 0 2px rgba(52,180,236,0.2);
+}
+
+.add-note-form textarea {
+  min-height: 60px;
+  max-height: 120px;
+}
+
+.add-note-form .submit-button {
+  background: #34b4ec;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.add-note-form .submit-button:hover {
+  background: #1c536c;
+}
+
+.add-note-form .submit-button:active {
+  transform: scale(0.98);
+}
+
+.color-picker {
+  display: flex;
+  gap: 8px;
+  margin: 4px 0;
+  padding: 4px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s, border 0.2s, box-shadow 0.2s;
+  padding: 0;
+}
+
+.color-swatch:hover {
+  transform: scale(1.1);
+}
+
+.color-swatch.selected {
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px #34b4ec;
+}
+
+.emoji-picker {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 4px;
+  background: rgba(255,255,255,0.5);
+  border-radius: 10px;
+}
+
+.emoji-button {
+  background: white;
+  border: 1px solid #b4b4ac;
+  border-radius: 8px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s;
+  font-size: 1.2em;
+  padding: 0;
+}
+
+.emoji-button:hover {
+  transform: scale(1.1);
+  background: #f4ecac;
+}
+
+.emoji-button.selected {
+  background: #34b4ec;
+  border-color: #1c536c;
+  color: white;
+}
+
+@media (max-width: 600px) {
+  .add-note-form {
+    width: calc(100% - 48px);
+    margin: 16px;
+    padding: 16px;
+  }
+
+  .color-picker,
+  .emoji-picker {
+    justify-content: center;
+  }
+}
